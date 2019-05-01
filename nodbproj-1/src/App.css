@@ -1,18 +1,47 @@
-* {
-  text-align: center;
-}
 h1 {
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(16, 16, 119);
   background-color: green;
 }
-.playerCard {
+h3 {
+  background-color: transparent;
+  color: white;
+}
+.secTwo {
   display: flex;
-  float: center;
+  justify-content: center;
+  
+}
+button {
+  color: white;
+  background-color: rgb(61, 59, 59);
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+.playerCard {
+  text-align: center;
+  
   margin: 10px;
   height: 600px;
   width: 500px;
   background-color: orange;
   border: solid 25px rgb(61, 59, 59);
+}
+.profileImg {
+margin-left: 150px;
+margin-right: 150px;
+margin-bottom: 15px;
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+}
+.statistics {
+  margin: 10px;
+  height:350px;
+  width:480px;
+  display: inline-flex;
+  background-color:grey;
 }
