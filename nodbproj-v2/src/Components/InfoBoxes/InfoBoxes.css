@@ -1,0 +1,7 @@
+InfoBoxes {
+    margin: 10px;
+    height:350px;
+    width:480px;
+    display: inline-flex;
+    background-color:grey;
+  }
