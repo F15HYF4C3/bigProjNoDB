@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from 'axios'
+//import axios from 'axios'
 import Players from './components/NFL Players/Players';
 import './App.css';
 import './index';
@@ -16,7 +16,7 @@ class App extends Component {
     super(props);
     // const API_KEY = '';
     this.state = {
-        Players:[{
+        "Players":[{
   "playerId":"",
   "active":"",
   "jersey":"",
@@ -36,15 +36,15 @@ class App extends Component {
 
 // componentDidMount(){
 //   axios.get(`https://www.fantasyfootballnerd.com/service/players/json/dw68ms8krkjr`).then(resp =>{
-//     console.log(resp.data)
+//     console.log(resp.data) this.setState({})
 //   })
 // }
-nextPlayer(playerId){
-  let playerList = this.state.Players.slice();
-  axios.get(`https://www.fantasyfootballnerd.com/service/players/json/dw68ms8krkjr`).then(resp =>{
-    playerList.push(resp.data);
-  })
-}
+// nextPlayer(playerId){
+//   let playerList = this.state.Players.slice();
+//   axios.get(`https://www.fantasyfootballnerd.com/service/players/json/dw68ms8krkjr`).then(resp =>{
+//     playerList.push(resp.data);
+//   })
+
 render(){
 
   return (

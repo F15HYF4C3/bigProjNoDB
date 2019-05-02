@@ -1,4 +1,4 @@
-import { Players } from "./NFL Players/Players.js";
+import Players from "./NFL Players/Players.js";
 import React from 'react';
 import axios from 'axios';
 

@@ -22,22 +22,14 @@ button {
 }
 .playerCard {
   text-align: center;
-  
+
   margin: 10px;
   height: 600px;
   width: 500px;
   background-color: orange;
   border: solid 25px rgb(61, 59, 59);
 }
-.profileImg {
-margin-left: 150px;
-margin-right: 150px;
-margin-bottom: 15px;
-  background-color: blue;
-  width: 200px;
-  height: 200px;
-  border-radius: 200px;
-}
+
 .statistics {
   margin: 10px;
   height:350px;
