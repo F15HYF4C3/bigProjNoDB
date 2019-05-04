@@ -1,11 +1,11 @@
 
 
 .ProfileImg {
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-bottom: 15px;
-      background-color: rgb(77, 159, 184);
-      width: 200px;
-      height: 200px;
-      border-radius: 50px;
+    margin-left: 355px;
+    margin-right: 355px;
+    margin-bottom:19px;
+    margin-top: 19px;
+      width: 275px;
+      height: 275px;
+      border-radius: 75px;
 }

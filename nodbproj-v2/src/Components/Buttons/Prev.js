@@ -1,17 +1,13 @@
-import React, {Component} from 'react';
-import './Buttons.css'
+import React from 'react';
+import './buttons.css';
 
 
-
-class Prev extends Component {
- 
-    render(){
-        return (
-            <div className="Prev">
-      
-            </div>
-        )
-    }
+const Prev = (props) => {
+    
+  return (
+    <button onClick={props.displayPrev}>
+    PREVIOUS
+  </button>
+  );
 }
-
 export default Prev
