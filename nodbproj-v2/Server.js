@@ -12,7 +12,7 @@ exp.use(bodyParser.json());
 const port = process.env.PORT || 3001;
 const key = process.env.API_KEY;
 exp.get('/api/getData', (req, res)=>{
-axios.get(`https://www.fantasyfootballnerd.com/service/players/json/${key}`).then(resp =>{
+axios.get(`https://www.fantasyfootballnerd.com/service/nfl-teams/json/${key}`).then(resp =>{
       res.send(resp.data);
     })
 })

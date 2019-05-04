@@ -1,44 +1,19 @@
-// import React, {Component} from 'react';
-// import './Buttons.css';
-// // import key from './Server';
-// import axios from 'axios';
+import React from 'react';
+import './buttons.css';
 
 
 
-// class Next extends Component {
- 
-//     constructor(props){
-//         super(props);
 
-//         this.state = {
-//             Players: [
-//                 {
-//                     playerId: ""
-//                 }
-//             ]
-//         }
-//     }
+const Next = (props) => {
+    
+        return (
 
-//     // componentDidUpdate(){
-//     //     axios.get(`https://www.fantasyfootballnerd.com/service/players/json/${key}`).then(resp =>{
-//     //         console.log(resp.data);
-//     //         this.setState({})
-//     // })
-//     // }
-//     // nextPlayer(Players){
-//     //     let playList = this.state.Players.slice();
-//     //     for(i=0; i<playList.length; i++){
-
-//     //     }
-
-//     // }
-//     render(){
-//         return (
-//             <div className="Next">
+          <button onClick={props.displayNext}>
+          NEXT
+        </button>
       
-//             </div>
-//         )
-//     }
-// }
+        );
+      }
+      
 
-// export default Next
+export default Next
