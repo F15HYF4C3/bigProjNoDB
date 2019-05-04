@@ -23,8 +23,8 @@ h3 {
 .playerCard {
   text-align: center;
   margin: 10px;
-  height: 600px;
-  width: 500px;
+  height: 900px;
+  width: 1000px;
   background-color: orange;
   border: solid 25px rgb(61, 59, 59);
   
@@ -32,8 +32,16 @@ h3 {
 
 .statistics {
   margin: 10px;
-  height:350px;
-  width:480px;
-  display: inline-flex;
+  height:578px;
+  width: 980px;
   background-color:grey;
+  margin-top: 8px;
+  color: white;
+  font-size: 3rem;
+}
+
+.label {
+  font-size: 50px;
+  margin: 10px;
+  color: rgb(61, 59, 59);
 }
