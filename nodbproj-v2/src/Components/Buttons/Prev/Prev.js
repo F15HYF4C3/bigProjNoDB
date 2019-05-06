@@ -6,7 +6,14 @@ const Prev = (props) => {
     
   return (
     <button className="movement" onClick={props.displayPrev}>
-    PREVIOUS
+    <p>P</p>
+    <p>R</p>
+    <p>E</p>
+    <p>V</p>
+    <p>I</p>
+    <p>O</p>
+    <p>U</p>
+    <p>S</p>
   </button>
   );
 }

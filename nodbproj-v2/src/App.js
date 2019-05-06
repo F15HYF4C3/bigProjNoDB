@@ -86,15 +86,16 @@ render() {
     
     <div className="App">
 <div className="banner"><h1>2019 Football Teams</h1></div>
-<DraftList/>
+
 
      <div>
 
        
 
 <section className="secTwo">
+<DraftList/>
 <Accept/>
-<Prev displayPrev={this.displayPrev}>PREVIOUS</Prev> 
+<Prev displayPrev={this.displayPrev}></Prev> 
 
   <div className="playerCard">
  
@@ -116,7 +117,7 @@ render() {
     </div>
   </div>
      
-<Next displayNext={this.displayNext}>NEXT</Next>
+<Next displayNext={this.displayNext}>Boobs</Next>
 <Reject/>
 </section>
      </div>

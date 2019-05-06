@@ -1,4 +1,6 @@
 .draftList {
     background-color: grey;
-    
+    height: 90vh;
+    width: 200px;
+    margin: 20px;
 }
