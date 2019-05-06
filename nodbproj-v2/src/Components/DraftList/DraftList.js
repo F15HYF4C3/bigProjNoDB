@@ -1,20 +1,38 @@
-// import React, {Component} from 'react';
-// import Server from './server'
-
-// class DraftList extends component {
-
-    
-//     render(){
-//         return(
-//             <div>
+import React from 'react';
+import './DraftList.css'
 
 
 
-//             </div>
-//         )
-//     }
-//       };
 
-//       export default DrafList
+    const DraftList = (props) => {
+        
+   
+        return(
+            <div className="draftList">
+            Five Favorites
+
+
+
+            </div>
+        )
+      };
+
+      export default DraftList
 
 //THIS WAS MEANT TO BE A SIDE SHELF WHERE YOU COULD PICK YOUR 5 FAVORITE TEAMS TO DISPLAY
+//functional component
+// not using methods
+// not using state
+
+// import React from 'react'
+
+// const profileImg = (props) => {
+// //instead of using this.props
+// //use props.
+//   return (
+//     <div>
+//     </div>
+//   )
+// }
+
+// export default profileImg

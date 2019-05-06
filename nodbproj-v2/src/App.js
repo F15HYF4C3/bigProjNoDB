@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
 import './App.css';
-import Next from './Components/Buttons/Next';
-import Prev from './Components/Buttons/Prev';
+import Next from './Components/Buttons/Next/Next';
+import Prev from './Components/Buttons/Prev/Prev';
 import ProfileImg from './Components/Images/ProfileImg';
 import axios from 'axios';
+import DraftList from './Components/DraftList/DraftList';
+import Accept from './Components/Buttons/Accept/Accept';
+import Reject from './Components/Buttons/Reject/Reject';
 
 class App extends Component {
   constructor(props) {
@@ -19,6 +22,9 @@ this.state = {
 
 this.displayNext = this.displayNext.bind(this);
 this.displayPrev = this.displayPrev.bind(this);
+this.faveList = this.faveList.bind(this);
+// this.acceptTeam = this.acceptTeam.bind(this);
+// this.removeTeam = this.rejectTeam.bind(this);
 }
   
 componentDidMount(){
@@ -43,6 +49,24 @@ displayPrev(event){
 
 
 
+faveList = (item) =>{
+  let list =[];
+//   // for(let i=0; i<=list.length; i++){
+//   //   if(i)
+  
+//   acceptTeam(event){
+  this.setState({
+    list: list.push(this.state.NFLTeams)
+  })
+// }
+//   rejectTeam(event){
+//   this.setState({
+//     list: list.slice(list.indexOf(), this.state.NFLTeams)
+// })
+// }
+}
+
+
 render() {
   const teams= this.state.NFLTeams.map((e, i)=>{
     return <div key={i}>{e.fullName}</div>
@@ -62,13 +86,14 @@ render() {
     
     <div className="App">
 <div className="banner"><h1>2019 Football Teams</h1></div>
-
+<DraftList/>
 
      <div>
 
        
 
 <section className="secTwo">
+<Accept/>
 <Prev displayPrev={this.displayPrev}>PREVIOUS</Prev> 
 
   <div className="playerCard">
@@ -92,6 +117,7 @@ render() {
   </div>
      
 <Next displayNext={this.displayNext}>NEXT</Next>
+<Reject/>
 </section>
      </div>
 

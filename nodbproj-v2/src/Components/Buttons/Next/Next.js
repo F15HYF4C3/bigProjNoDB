@@ -1,5 +1,5 @@
 import React from 'react';
-import './buttons.css';
+import './Next.css';
 
 
 
@@ -8,7 +8,7 @@ const Next = (props) => {
     
         return (
 
-          <button onClick={props.displayNext}>
+          <button className="movement" onClick={props.displayNext}>
           NEXT
         </button>
       

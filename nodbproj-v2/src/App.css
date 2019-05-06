@@ -13,13 +13,10 @@ h3 {
   justify-content: center;
   
 }
-/* button {
-  color: white;
-  background-color: rgb(61, 59, 59);
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-} */
+.draftList {
+display: flexbox;
+justify-content: left;
+}
 .playerCard {
   text-align: center;
   margin: 10px;

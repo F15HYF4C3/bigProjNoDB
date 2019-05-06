@@ -1,11 +1,11 @@
 import React from 'react';
-import './buttons.css';
+import './Prev.css';
 
 
 const Prev = (props) => {
     
   return (
-    <button onClick={props.displayPrev}>
+    <button className="movement" onClick={props.displayPrev}>
     PREVIOUS
   </button>
   );
