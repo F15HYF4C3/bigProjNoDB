@@ -1,4 +1,4 @@
-h1 {
+.banner {
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(16, 16, 119);
@@ -32,13 +32,24 @@ justify-content: left;
   height:578px;
   width: 980px;
   background-color:grey;
-  margin-top: 8px;
+  /* margin-top: 8px; */
   color: white;
-  font-size: 3rem;
+  font-size: 27px;
+  
 }
 
 .label {
-  font-size: 50px;
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 40px;
+  border: solid 5px rgb(61, 59, 59);
   color: rgb(61, 59, 59);
+  background-color: black;
+}
+
+.team{
+  font-size: 50px;
+  border: solid 5px rgb(61, 59, 59);
+  color: rgb(61, 59, 59);
+  background-color: green;
 }

@@ -8,19 +8,37 @@ const exp = express();
 exp.use(cors());
 exp.use(bodyParser.json());
 
+let teams = [];
+const favoriteTeams = [];
 
 const port = process.env.PORT || 3001;
 const key = process.env.API_KEY;
 exp.get('/api/getData', (req, res)=>{
 axios.get(`https://www.fantasyfootballnerd.com/service/nfl-teams/json/${key}`).then(resp =>{
+    teams = resp.data.NFLTeams;
       res.send(resp.data);
     })
 })
 
+exp.post('/api/add', (req, res)=>{
+    favoriteTeams.push(teams.filter((e, i)=>{
+        return e.code === req.body.code
+    })[0])
+    res.send(favoriteTeams)
+})
 
+exp.delete('/api/delete/:id', (req, res)=>{
+    let id;
+    favoriteTeams.filter((e, i)=>{
+      e.code === req.params.code && id === i;
+      return id;
+    })
+    favoriteTeams.splice(id, 1)
+    res.send(favoriteTeams)
+})
     
 
 
 exp.listen(port, ()=>{
-    console.log(`I guess you can code after all! Port ${port} has been unlocked for you.`)
+    console.log(`Port ${port} has been opened.`)
 });

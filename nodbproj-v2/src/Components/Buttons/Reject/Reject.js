@@ -5,7 +5,7 @@ import './Reject.css'
 
 const Reject = (props) => {
     return (
-        <button className="reject" onClick={props.rejectTeam}>
+        <button className="reject" onClick={props.onDeleteHandle}>
       Remove
     </button>
     )

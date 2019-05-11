@@ -17,14 +17,17 @@ this.state = {
     fullName:"",
     shortName:"",
     number: 0,
-    profile: ""
+    profile: "",
+    FaveList: []
+
 }
+
 
 this.displayNext = this.displayNext.bind(this);
 this.displayPrev = this.displayPrev.bind(this);
-this.faveList = this.faveList.bind(this);
-// this.acceptTeam = this.acceptTeam.bind(this);
-// this.removeTeam = this.rejectTeam.bind(this);
+this.onDeleteHandle = this.onDeleteHandle.bind(this);
+this.acceptTeam = this.acceptTeam.bind(this);
+
 }
   
 componentDidMount(){
@@ -47,54 +50,71 @@ displayPrev(event){
 
 }
 
-
-
-faveList = (item) =>{
-  let list =[];
-//   // for(let i=0; i<=list.length; i++){
-//   //   if(i)
-  
-//   acceptTeam(event){
-  this.setState({
-    list: list.push(this.state.NFLTeams)
+acceptTeam(code){
+  axios.post('http://localhost:3001/api/add', {code})
+  .then((res)=>{
+    this.setState({
+      FaveList: res.data
+    })
   })
-// }
-//   rejectTeam(event){
-//   this.setState({
-//     list: list.slice(list.indexOf(), this.state.NFLTeams)
-// })
-// }
 }
+
+onDeleteHandle(code){
+  axios.delete(`http://localhost:3001/api/delete/${code}`)
+  .then((res)=>{
+    this.setState({
+      FaveList: res.data
+    })
+  })
+
+}
+
+
+
+
+
 
 
 render() {
   const teams= this.state.NFLTeams.map((e, i)=>{
-    return <div key={i}>{e.fullName}</div>
+    return (
+    
+    <div key={i}>
+
+    <h3 className="label">Team Name:</h3>
+    <h1 className="statisticts">{e.fullName}</h1>    
+    <h3 className="label">State:</h3>
+    <h1 className="statisticts">{e.shortName}</h1>    
+    <h3 className="label">Code:</h3>
+    <h1 className="statisticts">{e.code}</h1>
+
+    <button className="accept" onClick={()=>{
+      this.acceptTeam(e.code)
+    }}>Add</button>
+    <button className="reject" onClick={()=>{
+      this.onDeleteHandle(e.code)
+    }}>Delete</button>
+    </div>
+    )
+
 
   })
-  const nickName= this.state.NFLTeams.map((e, i)=>{
-    return <div key={i}>{e.shortName}</div>
 
-  })
-  const acronym= this.state.NFLTeams.map((e, i)=>{
-    return <div key={i}>{e.code}</div>
-
-  })
-  
 
   return (
-    
     <div className="App">
-<div className="banner"><h1>2019 Football Teams</h1></div>
 
+<div className="banner">
+<h1>2019 Football Teams</h1>
+</div>
 
-     <div>
+  <div>       
 
-       
+    <section className="secTwo">
+  <DraftList FaveList={this.state.FaveList}>
 
-<section className="secTwo">
-<DraftList/>
-<Accept/>
+  </DraftList>
+
 <Prev displayPrev={this.displayPrev}></Prev> 
 
   <div className="playerCard">
@@ -104,22 +124,17 @@ render() {
     {/* This is how you create a prop to pass down to your "ProfileImg" or other component */}
 
     <div className="statistics">
-    <section className="label">Team Name:</section>
+    <section className="team">Team Information</section>
       <div>{teams[this.state.number]}</div>
       
-      <section className="label">Represents:</section>
-        <div>{nickName[this.state.number]}</div>
       
-      <section className="label">Short Code:</section>
-        <div>{acronym[this.state.number]}</div>
       
-       
     </div>
   </div>
      
-<Next displayNext={this.displayNext}>Boobs</Next>
-<Reject/>
-</section>
+<Next displayNext={this.displayNext}></Next>
+
+    </section>
      </div>
 
     </div>
